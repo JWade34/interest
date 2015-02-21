@@ -47,3 +47,7 @@ gem 'bootstrap-sass'
 gem 'rails_12factor'
 gem 'pg_search'
 gem 'simple_form', '3.1.0.rc2'
+gem 'carrierwave'
+gem "mini_magick"
+gem 'fog'
+gem 'dotenv-rails'

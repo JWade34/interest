@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150219183324) do
 
   create_table "pins", force: :cascade do |t|
     t.string   "title"
-    t.string   "photo_url"
+    t.string   "photo"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

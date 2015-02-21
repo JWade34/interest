@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
-
+  has_many :pins
   has_secure_password
 
-  has_many :pins
+
 
   validates :name, presence: true, uniqueness: true
   validates :email, presence: true

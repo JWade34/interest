@@ -1,0 +1,16 @@
+<h1>Sessions#create</h1>
+
+
+<% if @current_user %>
+  // alert("way to go!");/
+  // window.location = "/"; -- works, but you can feel the reload
+
+  $('#auth-sign-in-modal').modal('hide')
+
+  $("#header-nav").html("<%= j render partial: "layouts/nav" %>");
+
+<% else %>
+
+  $(".form-feedback").append($('<div class="alert alert-danger" role="alert">Email or Password was bad</div>'));
+
+<% end %>
