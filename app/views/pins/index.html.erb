@@ -104,20 +104,44 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal3">Popup image</button> -->
+
+<!-- <div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <img src="//placehold.it/1000x600" class="img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
 
 
+<!Large modal
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+          <h4><%= @pin.title %></h4>
+          <%= link_to "Cancel", root_path, class: "btn btn-default" %>
 
 
+    </div>
+  </div>
+</div> -->
 
 
 
 <div class="container">
     <% @pins.each do |pin| %>
 
-      <div class="pin col-xs-3 box">
-        <%= link_to image_tag(pin.photo.url(:thumb), class: "img-responsive"), pin.photo.url(:large)  %>
+      <div class="col-md-3 col-xs-5 box">
+        <div align="center">
+        <%= link_to image_tag(pin.photo.url(:thumb), class: "img-responsive"), pin.photo.url(:large) %>
         <h4><%= pin.title %></h4>
-
+        </div>
       </div>
     <% end %>
   </div>
