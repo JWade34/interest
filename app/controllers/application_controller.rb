@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     if signed_in?
+      @current_user = User.find session[:user_id]
     else
       redirect_to sign_in_path
     end

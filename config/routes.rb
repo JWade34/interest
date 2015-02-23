@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root 'pins#index'
 
   resources :pins
@@ -7,7 +8,7 @@ Rails.application.routes.draw do
 
   get "/sign_in" => "sessions#new", as: :sign_in
   post "/sessions" => "sessions#create", as: :auth
-  get "/sign_out" => "sessions#destroy", as: :sign_out
+  delete "sign_out" => "sessions#destroy", as: :sign_out
 
   # get 'sessions/create'
   #

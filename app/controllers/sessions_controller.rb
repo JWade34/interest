@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     password = params[:password]
 
     user = User.find_by name: name
+
     if user.try(:authenticate, password)
       session[:user_id] = user.id
       @current_user = user
